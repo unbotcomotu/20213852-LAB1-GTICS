@@ -9,7 +9,7 @@ public class HomeController {
 
     @GetMapping("/principal")
     public String vistaPrincipal(@RequestParam(value = "code",required = false) String code){
-        if(code.equals("PUCP")){
+        if(code!=null&&code.equals("PUCP")){
             return "vistaPrincipal2";
         }else{
             return "vistaPrincipal";
